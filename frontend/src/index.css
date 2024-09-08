@@ -1,0 +1,41 @@
+/* Importing Tailwind's base styles */
+@tailwind base;
+
+/* Importing Tailwind's component classes */
+@tailwind components;
+
+/* Importing Tailwind's utility classes */
+@tailwind utilities;
+
+/* You can add custom styles here if needed */
+
+body {
+  @apply bg-gray-100 text-gray-800;
+}
+
+/* Customizing the button styles */
+button {
+  @apply rounded-lg font-semibold;
+}
+
+/* Additional custom styles */
+
+h1 {
+  @apply text-3xl font-bold text-center mb-4;
+}
+
+p {
+  @apply text-lg text-center mb-6;
+}
+
+form {
+  @apply bg-white p-8 rounded-lg shadow-lg;
+}
+
+input {
+  @apply w-full p-3 mb-4 border border-gray-300 rounded-lg;
+}
+
+a {
+  @apply text-blue-500 hover:underline;
+}
