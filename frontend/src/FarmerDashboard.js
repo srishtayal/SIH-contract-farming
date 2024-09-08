@@ -57,17 +57,17 @@ const Dashboard = () => {
         </header>
         <div className="flex flex-col p-6 bg-gray-100">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-          <Link to="/list-crops">
-  <div className="rounded-lg shadow-md h-64 flex flex-col bg-center bg-contain bg-no-repeat" style={{ backgroundImage: `url(${cropPic})` }}>
-    <div className="flex-grow"></div> {/* This will take up the space of the image */}
-    <div className="bg-white text-gray-600 p-6 flex items-center justify-center h-1/4 rounded-b-lg hover:text-light-green">
-      <h3 className="text-xl font-semibold">List Crops</h3>
-    </div>
-  </div>
-</Link>
+            <Link to="/list-crop">
+              <div className="rounded-lg shadow-md h-64 flex flex-col bg-center bg-contain bg-no-repeat" style={{ backgroundImage: `url(${cropPic})` }}>
+                <div className="flex-grow"></div>
+                <div className="bg-white text-gray-600 p-6 flex items-center justify-center h-1/4 rounded-b-lg hover:text-light-green">
+                  <h3 className="text-xl font-semibold">List Crops</h3>
+                </div>
+              </div>
+            </Link>
 
             <Link to="/list-land">
-              <div className="rounded-lg shadow-md h-64 flex flex-col  bg-center bg-cover bg-no-repeat" style={{ backgroundImage: `url(${landPic})` }}>
+              <div className="rounded-lg shadow-md h-64 flex flex-col bg-center bg-cover bg-no-repeat" style={{ backgroundImage: `url(${landPic})` }}>
                 <div className="flex-grow"></div>
                 <div className="bg-white text-gray-600 p-6 flex items-center justify-center h-1/4 rounded-b-lg hover:text-light-green">
                   <h3 className="text-xl font-semibold">List Land</h3>
@@ -77,7 +77,7 @@ const Dashboard = () => {
 
             <Link to="/list-tenant">
               <div className="rounded-lg shadow-md h-64 flex flex-col bg-contain bg-no-repeat bg-center" style={{ backgroundImage: `url(${farmerPic})` }}>
-              <div className="flex-grow"></div>
+                <div className="flex-grow"></div>
                 <div className="bg-white text-gray-600 p-6 flex items-center justify-center h-1/4 rounded-b-lg hover:text-light-green">
                   <h3 className="text-xl font-semibold">List Tenant</h3>
                 </div>

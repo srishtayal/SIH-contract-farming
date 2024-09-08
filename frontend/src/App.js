@@ -8,7 +8,10 @@ import FarmerProfile from './FarmerProfile';
 import BuyerDashboard from './BuyerDashboard';
 import Analytics from './Analytics';
 import NegotiateFarmer from './NegotiateFarmer';
-import SettingsFarmer from './SettingsFarmer'
+import SettingsFarmer from './SettingsFarmer';
+import CropList from './CropList'; 
+import LandList from './LandList';
+import TenantList from './TenantList';
 
 const App = () => {
   return (
@@ -23,6 +26,9 @@ const App = () => {
         <Route path="/analytics" element={<Analytics />} />
         <Route path="/negotiate" element={<NegotiateFarmer />} />
         <Route path="/settings" element={<SettingsFarmer />} />
+        <Route path="/list-crop" element={<CropList />} />
+        <Route path="/list-land" element={<LandList />} />
+        <Route path="/list-tenant" element={<TenantList />} />
       </Routes>
     </Router>
   );

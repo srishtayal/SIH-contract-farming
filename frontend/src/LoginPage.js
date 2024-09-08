@@ -36,8 +36,8 @@ const LoginPage = () => {
           />
         </div>
         <div className='flex flex-col items-center mb-2'>
-          <p className='block text-gray-700 text-m text-white font-bold mb-1'>Already have an account?</p>
-          <Link to='/signup' className='block text-sm text-dark-green hover:text-light-green'>Sign in</Link>'
+          <p className='block text-gray-700 text-m text-white font-bold mb-1'>Don't have an account?</p>
+          <Link to='/signup' className='block text-sm text-dark-green hover:text-light-green'>Sign Up</Link>'
         </div>
         <div className="flex items-center justify-between">
           <button
