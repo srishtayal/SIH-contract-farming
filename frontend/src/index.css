@@ -39,3 +39,7 @@ input {
 a {
   @apply text-blue-500 hover:underline;
 }
+
+body {
+  background-color: #ffffff; 
+}
