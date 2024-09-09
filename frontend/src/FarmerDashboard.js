@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import cropPic from './images/cropImage.jpg';
 import landPic from './images/land-list.png';
@@ -6,9 +7,11 @@ import farmerPic from './images/farmer.jpg';
 import analyticsImg from './images/analytics-img.png';
 import { FaStar, FaStarHalfAlt, FaRegStar } from 'react-icons/fa';
 
-const Dashboard = () => {
+const FarmerDashboard = () => {
   const rating = 4.5;
   const reviews = 200;
+
+  const [receiver, setReceiver] = useState('Buyer');
 
   const renderStars = (rating) => {
     const fullStars = Math.floor(rating);
@@ -42,7 +45,7 @@ const Dashboard = () => {
         <nav className="flex flex-col mt-4">
           <Link to="/farmer" className="px-4 py-2 text-gray-200 hover:bg-green">Home</Link>
           <Link to="/analytics" className="px-4 py-2 text-gray-200 hover:bg-green">Analytics</Link>
-          <Link to="/negotiate" className="px-4 py-2 text-gray-200 hover:bg-green">Negotiate</Link>
+          <Link to="/negotiatefarmer" className="px-4 py-2 text-gray-200 hover:bg-green">Negotiate</Link>
           <Link to="/settings" className="px-4 py-2 text-gray-200 hover:bg-green">Settings</Link>
         </nav>
       </aside>
@@ -176,4 +179,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default FarmerDashboard;
