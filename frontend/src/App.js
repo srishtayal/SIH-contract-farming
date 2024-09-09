@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LandingPage from './LandingPage';
 import LoginPage from './LoginPage';
@@ -19,7 +20,28 @@ import GetTenant from './GetTenant';
 import BuyerProfile from './BuyerProfile';
 
 const App = () => {
+  useEffect(() => {
+    // Create the first script tag for injecting the Botpress webchat
+    const botpressScript = document.createElement('script');
+    botpressScript.src = 'https://cdn.botpress.cloud/webchat/v2.1/inject.js';
+    botpressScript.async = true;
+    document.body.appendChild(botpressScript);
+
+    // Create the second script tag for the Botpress webchat config
+    const configScript = document.createElement('script');
+    configScript.src = 'https://mediafiles.botpress.cloud/04c9b056-a691-42af-bd82-f9c33024171e/webchat/v2.1/config.js';
+    configScript.async = true;
+    document.body.appendChild(configScript);
+
+    // Clean up the scripts when the component unmounts
+    return () => {
+      document.body.removeChild(botpressScript);
+      document.body.removeChild(configScript);
+    };
+  }, []);
+
   return (
+    
     <Router>
       <Routes>
         <Route path="/" element={<LandingPage />} />
