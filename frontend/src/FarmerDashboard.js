@@ -44,9 +44,8 @@ const FarmerDashboard = () => {
         <div className="p-4 bg-dark-green text-3xl font-bold">Khetify</div>
         <nav className="flex flex-col mt-4">
           <Link to="/farmer" className="px-4 py-2 text-gray-200 hover:bg-green">Home</Link>
-          <Link to="/analytics" className="px-4 py-2 text-gray-200 hover:bg-green">Analytics</Link>
           <Link to="/negotiatefarmer" className="px-4 py-2 text-gray-200 hover:bg-green">Negotiate</Link>
-          <Link to="/settings" className="px-4 py-2 text-gray-200 hover:bg-green">Settings</Link>
+          <Link to="/farmerprofile" className="px-4 py-2 text-gray-200 hover:bg-green">Settings</Link>
         </nav>
       </aside>
       <main className="ml-64 p-4 flex-1">

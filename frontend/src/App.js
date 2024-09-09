@@ -16,6 +16,7 @@ import TenantList from './TenantList';
 import ShopCrop from './ShopCrop';
 import RentLand from './RentLand';
 import GetTenant from './GetTenant';
+import BuyerProfile from './BuyerProfile';
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/farmer" element={<FarmerDashboard />} />
         <Route path="/farmerprofile" element={<FarmerProfile />} />
+        <Route path="/buyerprofile" element={<BuyerProfile />} />
         <Route path="/buyer" element={<BuyerDashboard />} />
         <Route path="/analytics" element={<Analytics />} />
         <Route path="/negotiatefarmer" element={<NegotiateFarmer />} />

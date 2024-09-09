@@ -12,9 +12,8 @@ const NegotiateBuyer = () => {
                 <div className="p-4 bg-dark-green text-3xl font-bold">Khetify</div>
                 <nav className="flex flex-col mt-4">
                     <Link to="/buyer" className="px-4 py-2 text-gray-200 hover:bg-green">Home</Link>
-                    <Link to="/analytics" className="px-4 py-2 text-gray-200 hover:bg-green">Analytics</Link>
                     <Link to="/negotiate" className="px-4 py-2 text-gray-200 hover:bg-green">Negotiate</Link>
-                    <Link to="/settings" className="px-4 py-2 text-gray-200 hover:bg-green">Settings</Link>
+                    <Link to="/buyerprofile" className="px-4 py-2 text-gray-200 hover:bg-green">Settings</Link>
                 </nav>
             </aside>
 

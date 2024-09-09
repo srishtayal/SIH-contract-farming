@@ -1,5 +1,3 @@
-// GetTenant.js
-
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -40,26 +38,36 @@ const GetTenant = () => {
     navigate('/negotiatebuyer'); // Redirect to /negotiatebuyer
   };
 
+  // Function to handle "Rent" button click
+  const handleRentClick = (name) => {
+    alert(`You selected ${name} for rent.`);
+  };
+
   return (
     <div className="p-6 max-w-6xl mx-auto font-sans">
-      <h1 className="text-3xl font-bold mb-6">Get Tenant</h1>
+      <h1 className="text-3xl font-bold mb-6 text-dark-green">Get Tenant</h1>
 
-      {/* Vertical list container */}
-      <div className="space-y-6">
+      {/* Grid container */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {tenantData.length > 0 ? (
           tenantData.map((tenant) => (
-            <div key={tenant.id} className="border border-gray-200 rounded-lg overflow-hidden shadow-md">
+            <div key={tenant.id} className="border border-light-green rounded-lg overflow-hidden shadow-md bg-light-green text-dark-green">
               <div className="p-4 flex flex-col space-y-4">
                 <h2 className="text-xl font-semibold">{tenant.name}</h2>
-                <p className="text-gray-700"><strong>Age:</strong> {tenant.age}</p>
-                <p className="text-gray-700"><strong>Gender:</strong> {tenant.gender}</p>
-                <p className="text-gray-700"><strong>Marital Status:</strong> {tenant.maritalStatus}</p>
-                <p className="text-gray-700"><strong>Additional Details:</strong> {tenant.additionalDetails}</p>
+                <p className="text-gray-700 text-left"><strong>Age:</strong> {tenant.age}</p>
+                <p className="text-gray-700 text-left"><strong>Gender:</strong> {tenant.gender}</p>
+                <p className="text-gray-700 text-left"><strong>Marital Status:</strong> {tenant.maritalStatus}</p>
+                <p className="text-gray-700 text-left"><strong>Additional Details:</strong> {tenant.additionalDetails}</p>
                 <div className="flex space-x-2 mt-4">
-                  <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Rent</button>
+                  <button
+                    onClick={() => handleRentClick(tenant.name)}
+                    className="bg-yellow text-dark-green border border-dark-green px-4 py-2 rounded-3xl hover:bg-yellow-light"
+                  >
+                    Rent
+                  </button>
                   <button
                     onClick={handleNegotiateClick}
-                    className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
+                    className="bg-green text-white border border-green px-4 py-2 rounded-3xl hover:bg-green-dark"
                   >
                     Negotiate
                   </button>

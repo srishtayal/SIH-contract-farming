@@ -36,21 +36,20 @@ const BuyerDashboard = () => {
   ];
 
   return (
-    <div className="flex h-screen bg-gray-100">
+    <div className="flex h-screen">
       <aside className="fixed top-0 left-0 h-full w-64 bg-dark-green text-white flex flex-col">
         <div className="p-4 bg-dark-green text-3xl font-bold">Khetify</div>
         <nav className="flex flex-col mt-4">
           <Link to="/buyer" className="px-4 py-2 text-gray-200 hover:bg-green">Home</Link>
-          <Link to="/analytics" className="px-4 py-2 text-gray-200 hover:bg-green">Analytics</Link>
           <Link to="/negotiatebuyer" className="px-4 py-2 text-gray-200 hover:bg-green">Negotiate</Link>
-          <Link to="/settings" className="px-4 py-2 text-gray-200 hover:bg-green">Settings</Link>
+          <Link to="/buyerprofile" className="px-4 py-2 text-gray-200 hover:bg-green">Settings</Link>
         </nav>
       </aside>
       <main className="ml-64 p-4 flex-1">
         <header className="flex justify-between items-center px-4 py-2">
           <div className="text-2xl font-bold text-dark-green">Welcome to Buyer Dashboard</div>
           <div className="flex items-center space-x-4">
-            <Link to="/farmerprofile">
+            <Link to="/buyerprofile">
               <button className="px-4 py-2 bg-yellow text-black border border-black rounded-full">Profile</button>
             </Link>
           </div>
@@ -104,10 +103,10 @@ const BuyerDashboard = () => {
 
             <div className="bg-white p-6 rounded-lg shadow-md lg:col-span-2 lg:row-span-2">
               <h3 className="text-xl font-semibold mb-4">Analytics</h3>
-              <div className="bg-cover bg-center h-96 rounded-lg" style={{ backgroundImage: `url(${analyticsImg})` }} />
+              <div className="bg-contain bg-no-repeat bg-center h-96 rounded-lg" style={{ backgroundImage: `url(${analyticsImg})` }} />
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="bg-white p-6 rounded-lg shadow-md lg:row-span-2">
               <h3 className="text-xl font-semibold mb-4">Ratings</h3>
               <div className="text-gray-600 mb-4">
                 <p className="text-left">Average Rating:</p>
@@ -119,6 +118,10 @@ const BuyerDashboard = () => {
               </div>
               <div className="text-gray-600 mb-4">
                 <p className="text-left">Ratings:</p>
+                {renderStars(rating)}
+              </div>
+              <div className="text-gray-600 mb-4">
+                <p className="text-left"> Best Ratings:</p>
                 {renderStars(rating)}
               </div>
               <div className="text-gray-500">

@@ -4,7 +4,7 @@ import Contracts from './Contracts'; // Ensure the path is correct
 import Chat from './Chat'; // Ensure the path is correct
 
 const NegotiateFarmer = () => {
-    const [receiver, setReceiver] = useState('Buyer'); // Default receiver
+    const [receiver, setReceiver] = useState('Buyer'); 
 
     return (
         <div className="flex h-screen bg-gray-100">
@@ -12,9 +12,8 @@ const NegotiateFarmer = () => {
                 <div className="p-4 bg-dark-green text-3xl font-bold">Khetify</div>
                 <nav className="flex flex-col mt-4">
                     <Link to="/farmer" className="px-4 py-2 text-gray-200 hover:bg-green">Home</Link>
-                    <Link to="/analytics" className="px-4 py-2 text-gray-200 hover:bg-green">Analytics</Link>
                     <Link to="/negotiate" className="px-4 py-2 text-gray-200 hover:bg-green">Negotiate</Link>
-                    <Link to="/settings" className="px-4 py-2 text-gray-200 hover:bg-green">Settings</Link>
+                    <Link to="/farmerprofile" className="px-4 py-2 text-gray-200 hover:bg-green">Settings</Link>
                 </nav>
             </aside>
 
