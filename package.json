@@ -5,7 +5,17 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node frontend/src/App.js"
+    "start": "node frontend/src/App.js",
+    "frontend": "cd frontend && npm start",
+    "backend": "cd backend && node server.js",
+    "heroku-postbuild": "cd frontend && npm install && npm run build"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "socket.io": "^4.7.5",
+    "socket.io-client": "^4.7.5",
+    "ws": "^8.18.0"
   },
   "keywords": [],
   "author": "",
