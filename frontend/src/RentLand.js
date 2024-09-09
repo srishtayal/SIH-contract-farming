@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 const landData = [
   {
     id: 1,
-    location: 'Farmville',
+    location: 'Farmville, Haryana',
     priceToRent: 'Rs. 500/month',
     duration: '6 months',
     cropsGrown: 'Wheat, Corn',
@@ -13,7 +13,7 @@ const landData = [
   },
   {
     id: 2,
-    location: 'Greenfield',
+    location: 'Greenfield, UP',
     priceToRent: 'Rs. 450/month',
     duration: '12 months',
     cropsGrown: 'Rice, Barley',
@@ -21,7 +21,7 @@ const landData = [
   },
   {
     id: 3,
-    location: 'Harvest City',
+    location: 'Harvest City, Punjab',
     priceToRent: 'Rs. 600/month',
     duration: '3 months',
     cropsGrown: 'Oats, Soybeans',
@@ -29,7 +29,7 @@ const landData = [
   },
   {
     id: 4,
-    location: 'Farmville',
+    location: 'Farmville, Tamil Nadu',
     priceToRent: 'Rs. 500/month',
     duration: '6 months',
     cropsGrown: 'Wheat, Corn',
@@ -37,7 +37,7 @@ const landData = [
   },
   {
     id: 5,
-    location: 'Greenfield',
+    location: 'Greenfield, Madhya Pradesh',
     priceToRent: 'Rs. 450/month',
     duration: '12 months',
     cropsGrown: 'Rice, Barley',
@@ -45,7 +45,7 @@ const landData = [
   },
   {
     id: 6,
-    location: 'Harvest City',
+    location: 'Harvest City, Haryana',
     priceToRent: 'Rs. 600/month',
     duration: '3 months',
     cropsGrown: 'Oats, Soybeans',
