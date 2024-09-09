@@ -40,8 +40,7 @@ const App = () => {
     };
   }, []);
 
-  return (
-    
+  return ( 
     <Router>
       <Routes>
         <Route path="/" element={<LandingPage />} />
