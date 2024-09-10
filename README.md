@@ -38,8 +38,9 @@ Khetify is an online marketplace designed to connect farmers with buyers, offeri
 
 
 **Instructions to run locally:**
-cd backend npm install node server.js
-cd frontend npm install npm start
+1. cd backend npm install node server.js
+   
+2. cd frontend npm install npm start
 
 
 
