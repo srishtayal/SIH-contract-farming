@@ -37,6 +37,9 @@ Khetify is an online marketplace designed to connect farmers with buyers, offeri
 
 
 
+
+
+
 **Instructions to run locally:**
 1. cd backend npm install node server.js
    
@@ -44,7 +47,10 @@ Khetify is an online marketplace designed to connect farmers with buyers, offeri
 
 
 
-Team Name: GenNext
+
+
+
+**Team Name: GenNext**
 
 Team Leader: @srishtayal
 
@@ -59,4 +65,6 @@ MEMBER_6 - 2023UCI6542 - @ankrisharma
 
 
 PPT - https://drive.google.com/file/d/1Ch_LZ71UxPaNu_Fq0x5OygEgOTFM63Py/view?usp=drive_link
+
+
 Youtube video - https://youtu.be/oGBvuhpW1Mc?feature=shared
