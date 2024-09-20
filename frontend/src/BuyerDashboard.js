@@ -92,7 +92,7 @@ const BuyerDashboard = () => {
                   <li key={contract.id} className={`py-4 ${contract.status === 'Ongoing' ? 'bg-yellow-100' : 'bg-green-100'}`}>
                     <div className="flex justify-between items-center">
                       <span className="text-lg font-semibold">{contract.title}</span>
-                      <span className={`px-2 py-1 text-xs font-medium rounded-full ${contract.status === 'Ongoing' ? 'bg-yellow-200 text-yellow-800' : 'bg-green-200 text-green-800'}`}>
+                      <span className={`px-2 py-1 text-xs font-bold rounded-full ${contract.status === 'Ongoing' ? 'bg-yellow-200 text-yellow-800' : 'bg-green-200 text-green-800'}`}>
                         {contract.status}
                       </span>
                     </div>
@@ -117,12 +117,12 @@ const BuyerDashboard = () => {
                 {renderStars(rating)}
               </div>
               <div className="text-gray-600 mb-4">
-                <p className="text-left">Ratings:</p>
-                {renderStars(rating)}
+                <p className="text-left font-bold">Latest Review:</p>
+                <p className="text-left">Amazing service</p>
               </div>
               <div className="text-gray-600 mb-4">
-                <p className="text-left"> Best Ratings:</p>
-                {renderStars(rating)}
+                <p className="text-left font-bold"> Best Review:</p>
+                <p className="text-left">Top-notch professionalism</p>
               </div>
               <div className="text-gray-500">
                 <p className="text-sm">Based on {reviews} reviews</p>
