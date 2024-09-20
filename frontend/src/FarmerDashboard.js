@@ -4,13 +4,12 @@ import { Link } from "react-router-dom";
 import cropPic from './images/cropImage.jpg';
 import landPic from './images/land-list.png';
 import farmerPic from './images/farmer.jpg';
-import analyticsImg from './images/analytics-img.png';
 import { FaStar, FaStarHalfAlt, FaRegStar } from 'react-icons/fa';
+import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 
 const FarmerDashboard = () => {
   const rating = 4.5;
   const reviews = 200;
-
   const [receiver, setReceiver] = useState('Buyer');
 
   const renderStars = (rating) => {
@@ -36,6 +35,16 @@ const FarmerDashboard = () => {
     { id: 2, title: "Contract B", status: "Done" },
     { id: 3, title: "Contract C", status: "Ongoing" },
     { id: 4, title: "Contract D", status: "Done" }
+  ];
+
+  const analyticsData = [
+    { name: 'Jan', value: 4000 },
+    { name: 'Feb', value: 3000 },
+    { name: 'Mar', value: 2000 },
+    { name: 'Apr', value: 2780 },
+    { name: 'May', value: 1890 },
+    { name: 'Jun', value: 2390 },
+    { name: 'Jul', value: 3490 },
   ];
 
   return (
@@ -104,9 +113,16 @@ const FarmerDashboard = () => {
               </ul>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-md lg:col-span-2 lg:row-span-2">
-              <h3 className="text-xl font-semibold mb-4">Analytics</h3>
-              <div className="bg-contain bg-no-repeat bg-center h-96 rounded-lg" style={{ backgroundImage: `url(${analyticsImg})` }} />
+            <div className="bg-white p-6 rounded-lg shadow-md lg:col-span-2 lg:row-span-2 p-3">
+              <h3 className="text-xl font-semibold mb-4 p-5">Analytics</h3>
+              <ResponsiveContainer width="100%" height={300}>
+                <LineChart data={analyticsData}>
+                  <XAxis dataKey="name" />
+                  <YAxis />
+                  <Tooltip />
+                  <Line type="monotone" dataKey="value" stroke="#8884d8" />
+                </LineChart>
+              </ResponsiveContainer>
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-md lg:row-span-2">
